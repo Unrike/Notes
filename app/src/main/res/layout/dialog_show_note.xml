@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/gray_field"
+    >
 
     <TextView
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/title_tv"/>
+        android:id="@+id/title_tv"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,17 +20,17 @@
         android:scrollbars="vertical">
 
         <TextView
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/body_tv"/>
+            android:id="@+id/body_tv"
+            />
     </ScrollView>
-
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Закрыть"
+        android:text="@string/close"
         android:id="@+id/close_btn"
         />
 

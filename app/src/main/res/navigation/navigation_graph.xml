@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.kypcop.notes.fragments.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_showNoteDialogFragment"
+            app:destination="@id/showNoteDialogFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_newNoteFragment"
+            app:destination="@id/newNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newNoteFragment"
+        android:name="com.kypcop.notes.fragments.NewNoteFragment"
+        android:label="NewNoteFragment" />
+    <dialog
+        android:id="@+id/showNoteDialogFragment"
+        android:name="com.kypcop.notes.fragments.ShowNoteDialogFragment"
+        android:label="ShowNoteDialogFragment" />
+</navigation>

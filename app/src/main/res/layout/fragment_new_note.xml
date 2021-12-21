@@ -6,26 +6,30 @@
     android:paddingHorizontal="2dp">
 
     <EditText
-        android:hint="Тема"
+        android:hint="@string/title"
         android:paddingHorizontal="4dp"
         android:id="@+id/note_title_et"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:autofillHints="false" />
 
     <EditText
         android:paddingHorizontal="4dp"
-        android:hint="Текст"
+        android:hint="@string/body"
         android:gravity="top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:id="@+id/note_et"
-        android:background="@drawable/gray_field"/>
+        android:background="@drawable/gray_field"
+        android:inputType="text"
+        android:autofillHints="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ready"
+        android:text="@string/ready"
         android:id="@+id/ready_btn" />
 
 </LinearLayout>

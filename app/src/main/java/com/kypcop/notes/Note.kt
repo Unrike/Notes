@@ -4,21 +4,24 @@ import android.util.Log
 
 class Note(val title: String, val body: String) {
 
+
     fun serialize(): String {
         return "{${title}}:{${body}}"
     }
 
     companion object {
 
-        const val TAG = "Note"
+        private const val TAG = "Note"
         const val TITLE = "Title"
         const val BODY = "Body"
         const val INDEX = "Index"
 
 
         fun deserialize(string: String): Note {
-            return Note(string.substring(1, string.indexOf("}:{")),
-                    string.substring(string.indexOf("}:{") + 3, string.length - 1))
+            return Note(
+                string.substring(1, string.indexOf("}:{")),
+                string.substring(string.indexOf("}:{") + 3, string.length - 1)
+            )
         }
 
         fun serializeArray(notes: Array<Note>): String {
@@ -39,12 +42,20 @@ class Note(val title: String, val body: String) {
                 Log.i(TAG, "Note: $serNote")
                 Log.i(TAG, "Array: $string")
                 Log.i(TAG, "\n")
-                if(string == "end"){
+                if (string == "end") {
                     break
                 }
             }
             return list.toTypedArray()
         }
+    }
+
+    interface Observer {
+        fun onNoteEdited(index: Int, note: Note)
+
+        fun onNoteDeleted(index: Int, note: Note)
+
+        fun onNoteCreated(index: Int, note: Note)
     }
 
 

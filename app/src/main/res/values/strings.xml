@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Notes</string>
+    <string name="create_new_note">Create new note</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="title">Title</string>
+    <string name="body">Body</string>
+    <string name="ready">Ready</string>
+    <string name="close">Close</string>
 </resources>
